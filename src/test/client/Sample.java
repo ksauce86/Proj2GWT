@@ -248,6 +248,7 @@ public class Sample implements EntryPoint, ClickHandler
                return worker.name;
             }
          };
+      nameCol.setSortable(true);
       TextColumn<MyWorker> usernameCol =
          new TextColumn<MyWorker>()
          {
@@ -257,6 +258,7 @@ public class Sample implements EntryPoint, ClickHandler
                return worker.username;
             }
          };
+      usernameCol.setSortable(true);
       TextColumn<MyWorker> deptCol =
          new TextColumn<MyWorker>()
          {
@@ -266,6 +268,7 @@ public class Sample implements EntryPoint, ClickHandler
                return worker.department;
             }
          };
+      deptCol.setSortable(true);   
       CellTable<MyWorker> table =
          new CellTable<MyWorker>();
       final SingleSelectionModel<MyWorker> selectionModel =
